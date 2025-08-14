@@ -1,0 +1,18 @@
+
+<% if user_signed_in? %>
+<h1> home page   </h1>
+
+# <%= link_to 'Create New Product', new_shop_product_path(@shop) ,  class: "btn btn-sm btn-info" %>
+
+
+<%= link_to 'Create New Product', new_shop_product_path(@shop), class: "btn btn-sm btn-info" %>
+
+
+
+<%= link_to 'Create New Shop', new_shop_path,  class: "btn btn-sm btn-info" %>
+
+
+<%= link_to 'Create new user', assign_role_path,  class: "btn btn-sm btn-info" %>
+
+<%= button_to 'Logout', destroy_user_session_path, method: :delete %>
+<%end%>

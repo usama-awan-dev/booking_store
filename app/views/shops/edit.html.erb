@@ -1,0 +1,15 @@
+<%= form_with model: @shop, local: true, html: { multipart: true, class: "row g-2 align-items-center" } do |f| %>
+  <div class="col-auto">
+    <%= f.label :name, class: "visually-hidden" %>
+    <%= f.text_field :name, class: "form-control form-control-sm", placeholder: "Name", required: true %>
+  </div>
+
+  <div class="col-auto">
+    <%= f.label :image, class: "visually-hidden" %>
+    <%= f.file_field :image, class: "form-control form-control-sm" %>
+  </div>
+
+  <div class="col-auto">
+    <%= f.submit "Update", class: "btn btn-primary btn-sm" %>
+  </div>
+<% end %>
